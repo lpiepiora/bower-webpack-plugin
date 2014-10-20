@@ -1,0 +1,8 @@
+{
+  "name":    "module-multiple-js",
+  "version": "0.0.1",
+  "main":    [
+    "module0.js",
+    "module1.js"
+  ]
+}

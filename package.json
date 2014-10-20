@@ -1,0 +1,48 @@
+{
+  "name": "bower-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Use bower with webpack",
+  "main": "lib/bower-plugin.js",
+  "devDependencies": {
+    "css-loader": "^0.9.0",
+    "file-loader": "^0.8.1",
+    "jsdom": "^1.0.3",
+    "mocha": "1.21.x",
+    "rimraf": "^2.2.8",
+    "should": "4.0.x",
+    "style-loader": "^0.8.1",
+    "webpack": "^1.4.0"
+  },
+  "peerDependencies": {
+    "webpack": ">=1.4.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lpiepiora/bower-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "bower"
+  ],
+  "author": {
+    "name": "Lukasz Piepiora",
+    "email": "lpiepiora@gmail.com",
+    "url": "https://github.com/lpiepiora"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/mit-license.php"
+  },
+  "bugs": {
+    "url": "https://github.com/lpiepiora/bower-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/lpiepiora/bower-webpack-plugin",
+  "dependencies": {
+    "loader-utils": "^0.2.5",
+    "q": "^1.0.1"
+  }
+}

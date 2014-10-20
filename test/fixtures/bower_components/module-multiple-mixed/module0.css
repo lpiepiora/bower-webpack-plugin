@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'module-multiple-mixed';
+    src: url(../fixture-fonts.woff);
+}
+
+.module-multiple-mixed {
+    font-size: 2em;
+    font-family: 'module-multiple-mixed', serif;
+}

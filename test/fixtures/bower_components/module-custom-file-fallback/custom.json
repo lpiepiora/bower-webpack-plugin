@@ -1,0 +1,8 @@
+{
+  "name":    "module-custom-file-fallback",
+  "version": "0.0.1",
+  "main":    [
+    "module0.js",
+    "module0.css"
+  ]
+}

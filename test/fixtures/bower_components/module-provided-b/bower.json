@@ -1,0 +1,7 @@
+{
+  "name": "module-provided-b",
+  "version": "0.0.1",
+  "main": [
+    "./module0.js"
+  ]
+}

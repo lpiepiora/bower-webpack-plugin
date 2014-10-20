@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'module-multiple-mixed-with-subdirs';
+    src: url(../fonts/fixture-fonts.woff);
+}
+
+.module-multiple-mixed-with-subdirs {
+    font-size: 2em;
+    font-family: 'module-multiple-mixed-with-subdirs', serif;
+}

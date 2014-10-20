@@ -1,0 +1,5 @@
+{
+  "name":    "module-single-string",
+  "version": "0.0.1",
+  "main":    "./module0.js"
+}

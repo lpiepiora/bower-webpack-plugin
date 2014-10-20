@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'module-single-string-css';
+    src: url(../fixture-fonts.woff);
+}
+
+.module-single-string-css {
+    font-size: 10px;
+    font-family: 'module-single-string-css', serif;
+}

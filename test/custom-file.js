@@ -26,11 +26,9 @@ var testUtils = require('./test-utils');
 
 var BowerWebpackPlugin = require("../");
 
-describe("resolving of files, when having custom module file name", function () {
+testUtils.describe("resolving of files, when having custom module file name", function () {
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should take the custom file, when the normal file is last", function (done) {
     var expectations = {

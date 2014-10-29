@@ -23,11 +23,9 @@
  */
 var testUtils = require("./test-utils");
 
-describe("resolving of single file modules", function () {
+testUtils.describe("resolving of single file modules", function () {
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should load a 'main' with a single string value, pointing to a JavaScript file", function (done) {
     var expectations = {

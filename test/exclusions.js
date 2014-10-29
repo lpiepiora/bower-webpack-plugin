@@ -26,11 +26,9 @@ var testUtils = require('./test-utils');
 
 var BowerWebpackPlugin = require("../");
 
-describe("resolving of modules, with exclusion of unwanted files", function () {
+testUtils.describe("resolving of modules, with exclusion of unwanted files", function () {
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should exclude unwanted files based on the regular expressions (string test)", function (done) {
     var expectations = {

@@ -27,12 +27,10 @@ var testUtils = require('./test-utils');
 var webpack = require("webpack");
 var BowerWebpackPlugin = require("../");
 
-describe("integration with provide plugin", function () {
+testUtils.describe("integration with provide plugin", function () {
 
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should load a plugin via the provide plugin", function (done) {
 

@@ -34,8 +34,21 @@ var OUTPUT_DIR = path.join(__dirname, '../dist');
 
 exports.OUTPUT_DIR = OUTPUT_DIR;
 
-exports.clearOutput = function (done) {
-  return rm(OUTPUT_DIR, done);
+/**
+ * Describes a bower plugin test.
+ * @param text
+ * @param fn
+ */
+exports.describe = function (text, fn) {
+  function clearOutput(done) {
+    return rm(OUTPUT_DIR, done);
+  }
+
+  return describe(text, function () {
+    beforeEach(clearOutput);
+    afterEach(clearOutput);
+    fn();
+  });
 };
 
 /**

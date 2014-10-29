@@ -24,12 +24,10 @@
 
 var testUtils = require('./test-utils');
 
-describe("integration with module alias plugin", function () {
+testUtils.describe("integration with module alias plugin", function () {
 
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should resolve modules, which were aliased by a 'resolve.alias' entry", function (done) {
     var expectations = {

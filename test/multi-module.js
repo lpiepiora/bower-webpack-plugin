@@ -24,12 +24,10 @@
 
 var testUtils = require("./test-utils");
 
-describe("resolving of multi-file modules", function () {
+testUtils.describe("resolving of multi-file modules", function () {
 
   var config = testUtils.config;
   var testBowerPlugin = testUtils.testBowerPlugin;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should load two JavaScript files included in a 'bower.json' file", function (done) {
     var expectations = {

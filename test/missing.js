@@ -24,12 +24,10 @@
 
 var testUtils = require('./test-utils');
 
-describe("behaviour when requiring missing modules or files", function () {
+testUtils.describe("behaviour when requiring missing modules or files", function () {
 
   var config = testUtils.config;
   var testBowerPluginError = testUtils.testBowerPluginError;
-
-  beforeEach(testUtils.clearOutput);
 
   it("should raise errors, when requiring a module, which does not exist", function (done) {
     testBowerPluginError(config("module-missing.js"), done);

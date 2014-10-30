@@ -186,6 +186,12 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.1 - 30 Oct 2014
+
+Fixes for issues:
+ * [Use resolve.modulesDirectories, when resolving bower modules](https://github.com/lpiepiora/bower-webpack-plugin/issues/2)
+ * [Requesting modules aliased via 'resolve.alias' fails](https://github.com/lpiepiora/bower-webpack-plugin/issues/3)
+
 ## 0.1.0 - 26 Oct 2014
 
 Initial release

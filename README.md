@@ -186,6 +186,11 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.2 - 31 Oct 2014
+
+Fixes for issues:
+  * [Resolve strategy](https://github.com/lpiepiora/bower-webpack-plugin/issues/5)
+
 ## 0.1.1 - 30 Oct 2014
 
 Fixes for issues:

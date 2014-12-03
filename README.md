@@ -40,6 +40,8 @@ will try them in the order they are mentioned. The first matching will be used.
 
 * `excludes` {`RegExp[]` or `RegExp`} - the plugin will match files contained in a manifest, and will exclude all files, which match any of the expressions.
 
+* `overrides` {`Object`} - the plugin will override properties in the manifest file, includes the main.js file.
+
 Using the plugin, without specifying the configuration is equivalent to following:
 
 ```javascript
@@ -47,8 +49,13 @@ plugins: [
   new BowerWebpackPlugin({
     modulesDirectories: ["bower_components"],
     manifestFiles:      "bower.json",
-    includes:           /.*/
-    excludes:           []
+    includes:           /.*/,
+    excludes:           [],
+    overrides: {
+      'bower-package': {
+        'main': 'path/to/main'
+      }
+    }
   })
 ]
 ```

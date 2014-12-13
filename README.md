@@ -186,10 +186,15 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.4 - 13 Dec 2014
+
+Fixes for issues:
+  * [The example never finishes and leaks](https://github.com/lpiepiora/bower-webpack-plugin/issues/6)
+
 ## 0.1.3 - 27 Nov 2014
 
 Fixes for issues:
-  * [The exemple never finishes and leaks](https://github.com/lpiepiora/bower-webpack-plugin/issues/6)
+  * [The example never finishes and leaks](https://github.com/lpiepiora/bower-webpack-plugin/issues/6)
 
 ## 0.1.2 - 31 Oct 2014
 

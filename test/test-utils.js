@@ -75,7 +75,7 @@ exports.testBowerPlugin = function testBowerPlugin(webpackConfig, expectedModule
     var jsonStats = stats.toJson();
     jsonStats.errors.should.be.eql([]);
 
-    var bundleScript = 'file://' + path.join(webpackConfig.output.path, webpackConfig.output.filename);
+    var bundleScript = 'file:///' + path.join(webpackConfig.output.path, webpackConfig.output.filename);
     jsdom.env("<html></html>", [bundleScript], {}, function (errors, window) {
       should(errors).be.equal(null);
 

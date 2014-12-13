@@ -17,7 +17,8 @@
     "webpack": ">=1.4.0"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "debug-test": "mocha --debug-brk --reporter spec"
   },
   "repository": {
     "type": "git",

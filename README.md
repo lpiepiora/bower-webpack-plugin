@@ -186,6 +186,11 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.5 - 05 Jan 2015
+
+Changes:
+ * [Use data.resource rather than userRequest](https://github.com/lpiepiora/bower-webpack-plugin/pull/9)
+
 ## 0.1.4 - 13 Dec 2014
 
 Fixes for issues:

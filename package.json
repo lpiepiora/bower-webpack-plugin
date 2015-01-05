@@ -1,6 +1,6 @@
 {
   "name": "bower-webpack-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Use bower with webpack",
   "main": "lib/bower-plugin.js",
   "devDependencies": {

@@ -186,6 +186,11 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.6 - 01 Feb 2015
+
+Changes:
+ * [Fix resolving of bower.json, when used in conjunction with other plugins](https://github.com/lpiepiora/bower-webpack-plugin/pull/11)
+
 ## 0.1.5 - 05 Jan 2015
 
 Changes:

@@ -39,7 +39,7 @@ The plugin takes options object as its single argument.
 
 * `excludes` {`RegExp[]` or `RegExp`} - the plugin will match files contained in a manifest, and will exclude all files, which match any of the expressions.
 
-# `searchResolveModulesDirectories {`boolean`} - if `false`, the plugin will not search [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories) for bower components.
+* `searchResolveModulesDirectories` {`boolean`} - if `false`, the plugin will not search [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories) for bower components.
 
 Using the plugin, without specifying the configuration is equivalent to following:
 
@@ -188,7 +188,7 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
-## 0.1.7 - 06 Apr 2015
+## 0.1.8 - 06 Apr 2015
 
 Changes:
   * [Add 'searchResolveModulesDirectories' option](https://github.com/lpiepiora/bower-webpack-plugin/pull/15)

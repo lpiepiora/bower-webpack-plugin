@@ -31,14 +31,15 @@ module.exports = {
 
 The plugin takes options object as its single argument.
 
-* `modulesDirectories` {`string[]` or `string`} - the array of extra module directories, the plugin will look for bower components in. The plugin searches also for modules in directories defined at [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories).
+* `modulesDirectories` {`string[]` or `string`} - the array of extra module directories, the plugin will look for bower components in. Unless `searchResolveModulesDirectories` is `false`, the plugin searches also for modules in directories defined at [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories).
 
-* `manifestFiles` {`string[]` or `string`} - the names of the bower manifest files. The plugin
-will try them in the order they are mentioned. The first matching will be used.
+* `manifestFiles` {`string[]` or `string`} - the names of the bower manifest files. The plugin will try them in the order they are mentioned. The first matching will be used.
 
 * `includes` {`RegExp[]` or `RegExp`} - the plugin will match files contained in a manifest file, and will include only those which match any of the RegExp expressions.
 
 * `excludes` {`RegExp[]` or `RegExp`} - the plugin will match files contained in a manifest, and will exclude all files, which match any of the expressions.
+
+# `searchResolveModulesDirectories {`boolean`} - if `false`, the plugin will not search [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories) for bower components.
 
 Using the plugin, without specifying the configuration is equivalent to following:
 
@@ -48,7 +49,8 @@ plugins: [
     modulesDirectories: ["bower_components"],
     manifestFiles:      "bower.json",
     includes:           /.*/
-    excludes:           []
+    excludes:           [],
+    searchResolveModulesDirectories: true
   })
 ]
 ```

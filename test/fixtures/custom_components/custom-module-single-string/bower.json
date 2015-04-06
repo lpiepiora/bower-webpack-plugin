@@ -1,0 +1,5 @@
+{
+  "name": "custom-module-single-string",
+  "version": "0.0.1",
+  "main": "custom-module-single-string-bower.js"
+}

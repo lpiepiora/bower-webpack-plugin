@@ -188,6 +188,11 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.7 - 06 Apr 2015
+
+Changes:
+  * [Add 'searchResolveModulesDirectories' option](https://github.com/lpiepiora/bower-webpack-plugin/pull/15)
+
 ## 0.1.6 - 01 Feb 2015
 
 Changes:

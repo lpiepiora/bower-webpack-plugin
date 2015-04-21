@@ -48,7 +48,7 @@ plugins: [
   new BowerWebpackPlugin({
     modulesDirectories: ["bower_components"],
     manifestFiles:      "bower.json",
-    includes:           /.*/
+    includes:           /.*/,
     excludes:           [],
     searchResolveModulesDirectories: true
   })

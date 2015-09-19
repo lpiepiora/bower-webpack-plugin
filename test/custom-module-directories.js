@@ -24,6 +24,7 @@
 
 var testUtils = require("./test-utils");
 var BowerWebpackPlugin = require("../");
+var fs = require("fs");
 
 testUtils.describe("resolving components being stored in custom module directories", function () {
   var config = testUtils.config,
@@ -100,6 +101,35 @@ testUtils.describe("resolving components being stored in custom module directori
     ];
 
     testBowerPlugin(cfg, expectations, done);
+  });
+
+
+  it("should resolve a component stored in 'custom_components' dir, if specified in a .bowerrc file", function (done) {
+    var cfg = config("custom-module-multiple-js"),
+      expectations = {
+        js:  ['custom-module-multiple-js-0', 'custom-module-multiple-js-1'],
+        css: []
+      };
+
+    cfg.resolve = {
+      modulesDirectories: undefined
+    };
+
+    // Generate a .bowerrc file pointing to `custom_components`
+    var bowerRcFilename = ".bowerrc",
+      bowerRc = {
+      "directory": "custom_components"
+    }
+    fs.writeFileSync(bowerRcFilename, JSON.stringify(bowerRc));
+
+    cfg.plugins = [
+      new BowerWebpackPlugin()
+    ];
+
+    testBowerPlugin(cfg, expectations, done);
+
+    // Clean-up.
+    fs.unlinkSync(bowerRcFilename);
   });
 
 });

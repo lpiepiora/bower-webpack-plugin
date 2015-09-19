@@ -34,10 +34,7 @@
     "email": "lpiepiora@gmail.com",
     "url": "https://github.com/lpiepiora"
   },
-  "license": {
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/mit-license.php"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lpiepiora/bower-webpack-plugin/issues"
   },

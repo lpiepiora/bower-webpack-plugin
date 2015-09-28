@@ -23,6 +23,7 @@
  */
 
 
+var fs = require("fs");
 var pluginUtils = require("../lib/bower-plugin-utils");
 
 describe("plugin utils library", function () {
@@ -46,6 +47,47 @@ describe("plugin utils library", function () {
       var result = pluginUtils.unique(["one", "two", "two", "three", "one"]);
       result.should.be.eql(["one", "two", "three"]);
       result.length.should.be.equal(3);
+      done();
+    });
+
+  });
+
+  describe("bower_components resolution", function () {
+
+    it("should return 'bower_components' when no .bowerrc file", function(done) {
+      var result = pluginUtils.resolveComponentsDirectory();
+      result.should.be.eql("bower_components");
+      done();
+    });
+
+    it("should return 'bower_components' when no definition in .bowerrc", function(done) {
+
+      // Generate a .bowerrc file
+      var bowerRcFilename = ".bowerrc",
+        bowerRc = {
+          "foo": ["bar"]
+        }
+      fs.writeFileSync(bowerRcFilename, JSON.stringify(bowerRc));
+      var result = pluginUtils.resolveComponentsDirectory();
+      fs.unlinkSync(bowerRcFilename);
+
+      result.should.be.eql("bower_components");
+      done();
+    });
+
+    it("should detect 'custom_components' if .bowerrc specifies it", function(done) {
+
+      // Generate a .bowerrc file pointing to `custom_components`
+      var bowerRcFilename = ".bowerrc",
+        bowerRc = {
+          "foo": "bar",
+          "directory": "custom_components"
+        }
+      fs.writeFileSync(bowerRcFilename, JSON.stringify(bowerRc));
+      var result = pluginUtils.resolveComponentsDirectory();
+      fs.unlinkSync(bowerRcFilename);
+
+      result.should.be.eql("custom_components");
       done();
     });
 

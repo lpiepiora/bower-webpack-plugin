@@ -188,6 +188,12 @@ Run `webpack` and open the `index.html` file.
 
 # Release History
 
+## 0.1.9 - 28 Sep 2015
+
+Changes:
+  * [Respect '.bowerrc' settings](https://github.com/lpiepiora/bower-webpack-plugin/issues/25)
+  * Use MIT as SPDX license
+
 ## 0.1.8 - 06 Apr 2015
 
 Changes:

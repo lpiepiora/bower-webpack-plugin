@@ -169,7 +169,7 @@ module.exports = {
   module:  {
     loaders: [
       {test: /\.css$/, loader: "style!css"},
-      {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"}
+      {test: /\.(woff|svg|ttf|eot)($|\?.*$)/, loader: "file-loader?name=[name].[ext]"}
     ]
   },
   plugins: [

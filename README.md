@@ -39,6 +39,8 @@ The plugin takes options object as its single argument.
 
 * `excludes` {`RegExp[]` or `RegExp`} - the plugin will match files contained in a manifest, and will exclude all files, which match any of the expressions.
 
+* `excludePackages` {`string[]` or `string`} - the plugin will match packages names contained in a manifest, and will exclude all packages with the same name.
+
 * `searchResolveModulesDirectories` {`boolean`} - if `false`, the plugin will not search [`resolve.modulesDirectories`](http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories) for bower components.
 
 Using the plugin, without specifying the configuration is equivalent to following:
@@ -50,6 +52,7 @@ plugins: [
     manifestFiles:      "bower.json",
     includes:           /.*/,
     excludes:           [],
+    excludePackages:    [],
     searchResolveModulesDirectories: true
   })
 ]
